@@ -1,0 +1,166 @@
+.modal-content {
+    background-color: #fefefe;
+    margin: 2%;
+    padding: 5%;
+    border: 1px solid #888;
+
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.range {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px
+}
+
+.addvalues {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rulevalues {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+}
+
+.rulevalues input {
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 5px;
+}
+
+.ordervalue {
+    display: inline-flex;
+    background: #ebf6fdbf;
+    border-radius: 50%;
+    width: 50%;
+    margin-right: 2%;
+}
+
+.ordervalue p {
+    margin: 1em;
+    overflow: auto;
+    overflow-wrap: break-word;
+}
+
+.saveBtn {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    right: 35px;
+    color: #1d7bdc;
+    cursor: pointer;
+}
+
+.saveBtn:focus {
+    outline: transparent;
+}
+
+.save {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+}
+
+.newrule {
+    padding-bottom: 5%;
+}
+
+.addnewBtn {
+    margin-top: 25px
+}
+
+.newaddedrule {
+    background-color: aliceblue;
+    width: 60%;
+    height: auto;
+}
+
+td {
+    padding-left: 10%
+}

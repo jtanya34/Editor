@@ -1,0 +1,133 @@
+<html>
+
+<head>
+    <title>Rule Editor</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./modal.css" />
+</head>
+
+<body>
+    <header>
+
+        <h1>Rule Editor</h1>
+    </header>
+    <div class="main">
+        <div class="modal-content">
+            <div class="range">
+
+                <h3>Select Rules</h3>
+                <button type="button" id="newrule" class="button">Add Rule</button>
+            </div>
+            <div class="error-message hidden" id="rent">Please enter numeric values only.</div>
+            <div class="range">
+                <div>
+                    <label class="container">Monthly Rent
+                        <input type="checkbox" id="rent" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="minmax">
+                    <input type="text" id="rentmin" name="min" placeholder="min">
+                    <input type="text" id="rentmax" name="max" placeholder="max">
+                </div>
+            </div>
+            <div class="error-message hidden" id="age">Please enter numeric values only.</div>
+            <div class="range">
+                <div>
+                    <label class="container">Age
+                        <input type="checkbox" id="age">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="minmax">
+                    <input type="text" id="agemin" name="min" placeholder="min">
+                    <input type="text" id="agemax" name="max" placeholder="max">
+                </div>
+            </div>
+            <div class="error-message hidden" id="tenure">Please enter numeric values only.</div>
+            <div class="range">
+                <div>
+                    <label class="container">Rental Tenure
+                        <input type="checkbox" id="tenure">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="minmax">
+                    <input type="text" id="tenuremin" name="min" placeholder="min">
+                    <input type="text" id="tenuremax" name="max" placeholder="max">
+                </div>
+            </div>
+            <div class="range">
+                <div>
+                    <label class="container">Zipcode
+                        <input type="checkbox" id="zipcode">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="addvalues">
+                    <div class="rulevalues" id=zipcodes>
+                        <input type="text" name="value" id="inputzipcodes" placeholder="value">
+                    </div>
+                    <div class="rulevalues">
+                        <button type="button" id="zipcodeaddBtn" class="addbtn button"
+                            onclick="addBtn('inputzipcodes','zipcode')">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="range">
+                <div>
+                    <label class="container">Order
+                        <input type="checkbox" id="order">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="addvalues">
+                    <div class="rulevalues" id="ordervalues">
+                        <input type="text" name="value" id="inputorders" placeholder="value">
+                    </div>
+                    <div class="rulevalues">
+                        <button type="button" id="orderaddBtn" class="addbtn button"
+                            onclick="addBtn('inputorders','order')">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="range hidden" id="newAddrule">
+                <div>
+                    <label class="newrule">Rule Name
+                    </label>
+                    <input type="text" name="value" id="ruleName" placeholder="value">
+                </div>
+                <div>
+                    <label class="newrule">Rule Value
+
+                    </label>
+                    <input type="text" name="value" id="rulevalue" placeholder="value">
+                </div>
+                <button type="button" id="add rule" class="addnewbtn button" onclick="setnewRule()">Set</button>
+            </div>
+            <div class="save">
+                <button type="button" class="saveBtn" id="save">Save</button>
+            </div>
+        </div>
+</body>
+<footer>
+    <ul>
+        <li>Add new rules by clicking on Add rule</li>
+        <li>Select a min/max or both </li>
+        <li>Can add multiple rule values for zipcode and order </li>
+        <li>Only checked rules will be saved</li>
+        <li>To edit other rules click on it to edit and press enter</li>
+        <li>When other rules left empty on editing it will delete the rule</li>
+
+        <li>Save to make a post call</li>
+    </ul>
+</footer>
+<script src="./script.js"></script>
+<script src="./modal.js"></script>
+
+</html>
